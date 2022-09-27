@@ -2,7 +2,7 @@
 # Write your Terraform module outputs here
 # ----------------------------------------
 
-    variable "addresses" { 
+variable "addresses" { 
    description = "ip adressess for dns record"
    type        = string 
   }
