@@ -2,25 +2,24 @@
 # Write your Terraform variable inputs here
 # ------------------------------------------
 
-variable "ip address" {
-  description = "ip address"
-  type        = string
-  default     = []
-}
+variable "addresses" { 
+   description = "ip adressess for dns record"
+   type        = string 
+  }
 
-variable "ttl" {
-  description = "ttl"
-  type        = number
-  default     = 100
-}
+variable "zone" { 
+   description = "zone"
+   type        = string
+   default = "example.com"  
+  }
 
-variable "zone" {
-  description = "zone"
-  type        = string
-  default     = "example.com"
-}
-  
-  variable "record type" {
-  description = "record type"
-  type        = string
-  default     = "a"
+variable "ttl" { 
+   description = "ttl"
+   type        = number
+  }
+
+variable "dns_record_type" { 
+   description = "dns_record_type"
+   type        = string
+   default = "a"  
+  }
