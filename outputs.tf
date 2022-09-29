@@ -2,24 +2,21 @@
 # Write your Terraform module outputs here
 # ----------------------------------------
 
-variable "addresses" { 
-   description = "ip adressess for dns record"
-   type        = string 
+output "addresses" {
+  value       = join(\n, var.addresses)
+  description = "addresses"
+}
+output "zone" { 
+   value       = var.zone
+   description = "zone""  
   }
 
-variable "zone" { 
-   description = "zone"
-   type        = string
-   default = "example.com"  
-  }
-
-variable "ttl" { 
+output "ttl" { 
+   value       = var.ttl
    description = "ttl"
-   type        = number
   }
 
-variable "dns_record_type" { 
-   description = "dns_record_type"
-   type        = string
-   default = "a"  
+output "dns_record_type" { 
+   value       = var.dns_record_type
+   description = "dns_record_type" 
   }
