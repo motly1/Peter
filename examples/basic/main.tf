@@ -9,3 +9,5 @@ module "dns_updater" {
   
   source = "../../."
 }
+
+  
